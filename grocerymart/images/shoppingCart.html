@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Style the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* Header/Logo Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background:rgb(255, 216, 144);
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+        }
+
+        /* Page Content */
+        .content {
+            padding: 30px;
+        }
+
+        /* Cart and Checkout Styling */
+        #cartItems {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-item button {
+            background-color: #a81e09;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #checkoutButton {
+    background-color: #3fb745;
+    color: white; /* Text color is white */
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove default hyperlink styling */
+    display: inline-block; /* Ensure it appears as a block-level element */
+    border-radius: 5px;
+}
+
+#checkoutButton:hover {
+    background-color:#004904;
+    text-decoration: none; /* Remove underline on hover */
+}
+
+
+        #grandTotal {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Shopping Cart</h1>
+    </div>
+
+    <div class="content">
+        <ul id="cartItems">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p id="grandTotal">Grand Total: ₹0</p>
+        <button id="checkoutButton">
+            <a href="/nf1/images/customersubmit.html" style="text-decoration: none; color: white;">Checkout</a>
+        </button>
+    </div>
+
+    <!-- JavaScript to handle the shopping cart functionality -->
+    <script>
+        // Function to remove an item from the cart
+        function removeFromCart(itemIndex) {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems.splice(itemIndex, 1); // Remove the item at the specified index
+            localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Update the cart
+            renderCart(); // Re-render the cart to reflect the changes
+        }
+
+        // Function to render the cart items and calculate the grand total
+        function renderCart() {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            const cartList = document.getElementById("cartItems");
+            cartList.innerHTML = ''; // Clear the existing cart list
+
+            let grandTotal = 0; // Initialize grand total
+
+            cartItems.forEach((item, index) => {
+                const cartItem = document.createElement("li");
+                cartItem.className = "cart-item";
+                cartItem.innerHTML = `
+                    <div>
+                        <h3>${item.productName}</h3>
+                        <p>Price: ₹${item.price.toFixed(2)}</p>
+                    </div>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartList.appendChild(cartItem);
+
+                grandTotal += item.price; // Add the item price to the grand total
+            });
+
+            const grandTotalElement = document.getElementById("grandTotal");
+            grandTotalElement.textContent = `Grand Total: ₹${grandTotal.toFixed(2)}`;
+        }
+
+        // Load and render the cart items on page load
+        window.addEventListener("load", function () {
+            renderCart();
+        });
+
+        // Function to handle the checkout process
+        document.getElementById("checkoutButton").addEventListener("click", checkout);
+    </script>
+</body>
+</html>

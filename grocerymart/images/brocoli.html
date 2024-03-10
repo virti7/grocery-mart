@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy fresh curry leaves</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        .side{
+            flex: 30%;
+            padding: 20px;
+        }
+        div.navbar{
+            overflow: hidden;
+            box-sizing: border-box;
+            
+        }
+        .main{
+            flex: 70%;
+            background-color:  rgb(226, 239, 216);
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+           
+        }
+        .row{
+            display: flex;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+                                   
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+    
+        .add{
+    background-color: #f18f18;
+   
+        }
+        button{
+            color: #fff;
+width: 32%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+font-size: 15px;
+
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+
+        }
+        .cartpart{
+            padding-left: 5px;
+            
+        }
+        #h3{
+           padding-left: 0px;
+            text-decoration: none;
+        }
+        button:hover {
+  background-color:  #61c258;
+  color: rgb(255, 255, 255);}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="side">
+          
+          <h3 id="h3">Fresh Broccoli</h3>
+          <div class="container"></div>
+          <div class="img" ><img src="broccoli.png"></div>
+          <div class="text"></div>
+          <div class="cartpart">
+          <p>
+          <h3 id="h3"> Fresh Broccoli 500 g</h3>
+          <del class="del">MRP:	₹120.84</del>
+          Price:	₹100.5 (₹0.12/g)
+          &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+            <h5>(Inclusive of all taxes)</h5>
+            </p>
+          </div>
+        </div>
+        <div class="main">
+        
+            <p class="p">
+                <h2>Fresho Broccoli</h2><br><hr>
+                <h4>About the Product:</h4>
+                Broccoli is a nutritious and versatile vegetable enjoyed in a variety of dishes worldwide. It is known for its vibrant green color and unique flavor. With its crisp texture and earthy taste, broccoli is a valuable addition to your culinary repertoire.<br><br><hr>
+                <h4>Storage and Uses:</h4>
+                We carefully package broccoli to ensure its freshness. Store it in the refrigerator to maintain its crispness and flavor. You can also preserve broccoli by placing it in an airtight container in the fridge for extended freshness.<br><br><hr>
+                <h4>Benefits:</h4>
+                Broccoli is not just a tasty vegetable; it's also a nutritional powerhouse. It's rich in vitamins, minerals, and antioxidants, making it a great choice for promoting overall health. Broccoli is known for its potential in supporting strong bones, aiding in digestion, and boosting the immune system.<br><br><hr>
+                <h4>Variable weight policy:</h4>
+                Please note that the item(s) in this product may vary slightly in size and weight. Consequently, the actual weight of the product delivered may have a small variance, and you will be billed based on the actual weight during order processing.
+              </p>
+              <script>
+               
+                document.getElementById("addToCartButton").addEventListener("click", addToCart);
+                function addToCart() {
+                    const productName = "Broccoli";
+                    const price = 100.5;
+                
+                    // Create a cart item object
+                    const cartItem = {
+                        productName: productName,
+                        price: price,
+                    };
+                
+                    // Retrieve existing cart items from local storage or initialize an empty array
+                    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+                
+                    // Add the item to the cart
+                    cartItems.push(cartItem);
+                
+                    // Store the updated cart items in local storage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                }
+                
+                        
+                        
+                    </script>
+                <a href="../images/shoppingCart.html">View Shopping Cart</a>
+                
+                </body>
+                </html>

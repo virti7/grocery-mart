@@ -1,0 +1,134 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Buy Fresh Spinach</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                <style>
+                    
+                    .side{
+                        flex: 30%;
+                        padding: 20px;
+                    }
+                    div.navbar{
+                        overflow: hidden;
+                        box-sizing: border-box;
+                        
+                    }
+                    .main{
+                        flex: 70%;
+                        background-color:  rgb(226, 239, 216);
+                        padding: 20px;
+                        box-sizing: border-box;
+                        display: block;
+                        font-family: 'Overpass', sans-serif;
+                       
+                    }
+                    .row{
+                        display: flex;
+                        box-sizing: border-box;
+                        font-family: 'Overpass', sans-serif;
+                                               
+                    }
+                    img{
+                        width: 300px;
+                        height: 300px;
+                        box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+                        margin-bottom: 25px;
+                        border-radius: 7px;
+                    }
+                
+                    .add{
+                background-color: #f18f18;
+               
+                    }
+                    button{
+                        color: #fff;
+            width: 32%;
+            box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+            padding: 10px ;
+            font-size: 15px;
+            
+            outline: none;
+            cursor: pointer;
+            border: 1px solid #999;
+            
+                    }
+                    .cartpart{
+                        padding-left: 5px;
+                        
+                    }
+                    #h3{
+                       padding-left: 0px;
+                        text-decoration: none;
+                    }
+                    button:hover {
+              background-color:  #61c258;
+              color: rgb(255, 255, 255);}
+                </style>
+            </head>
+            <body>
+                <div class="row">
+                    <div class="side">
+                      
+                      <h3 id="h3">Fresh Spinach</h3>
+                      <div class="container"></div>
+                      <div class="img" ><img src="spinach.jpg"></div>
+                      <div class="text"></div>
+                      <div class="cartpart">
+                      <p>
+                      <h3 id="h3"> Fresh Spinach, 100 g</h3>
+                      <del class="del">MRP:	₹32.84</del>
+                      Price: ₹11.5 (₹0.12/g)
+                        &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+                        <h5>(Inclusive of all taxes)</h5>
+            
+            </p>
+          </div>
+        </div>
+        <div class="main">
+            <p class="p">
+                <h2>Fresho Spinach</h2><br><hr>
+                <h4>About the Product:</h4>
+                Spinach is a versatile leafy green that plays a vital role in various culinary delights. It's an essential ingredient in salads, soups, and a wide range of dishes. With its vibrant green color and rich flavor, spinach adds a nutritious and delicious touch to your meals.<br><br><hr>
+                <h4>Storage and Uses:</h4>
+                Our spinach is carefully packed to maintain freshness. Store it in the refrigerator to keep it crisp and ready for use. You can also blanch and freeze spinach in an airtight container for long-term storage.<br><br><hr>
+                <h4>Benefits:</h4>
+                Spinach is packed with essential nutrients. It's a great source of iron, vitamins, and minerals, making it an excellent choice for overall health. It supports strong bones, boosts the immune system, and aids in digestion. Including spinach in your diet can lead to improved energy and vitality.<br><br><hr>
+                <h4>Variable weight policy:</h4>
+                Please note that the item(s) in this product may vary slightly in size and weight. Hence, the actual weight of the product delivered can have a small variance. You will be billed based on the actual weight during order processing.
+              </p>
+              
+    <!-- Add this JavaScript code in each product HTML page -->
+    <script>
+       // JavaScript function to add the product to the cart
+document.getElementById("addToCartButton").addEventListener("click", addToCart);
+function addToCart() {
+    const productName = "Fresh Spinach, 100 g";
+    const price = 11.5;
+
+    // Create a cart item object
+    const cartItem = {
+        productName: productName,
+        price: price,
+    };
+
+    // Retrieve existing cart items from local storage or initialize an empty array
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Add the item to the cart
+    cartItems.push(cartItem);
+
+    // Store the updated cart items in local storage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+        
+        
+    </script>
+<a href="../images/shoppingCart.html">View Shopping Cart</a>
+
+</body>
+</html>
+

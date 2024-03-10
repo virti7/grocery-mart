@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>login</title>
+        
+    </head>
+    <style>
+  body{
+    margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+background-image:url("/nf1/images/formdisplay.png");
+background-repeat: no-repeat;
+background-size: 100% 100%
+
+}
+.f1{
+width: 300px;
+background-color:white;
+box-shadow: 0 0 3px rgba(0,0,0,0.3); margin: 6% auto 0; 
+text-align: center;
+padding: 120px;
+}
+.f1 h1
+{ margin:10px;
+    padding:10px;
+}
+.input-box{
+border-radius:18px;
+padding:10px;
+margin:10px 0;
+width: 100% ;
+border:1px solid #999;
+outline: none;
+}
+button {
+    
+color: #fff;
+width: 100%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+border-radius:20px;
+font-size: 15px;
+margin:10px o;
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+}
+.signup-btn
+{ 
+background-color: #1c8adb;
+}
+.Login-btn
+{
+background-color: #1c8adb;
+
+}
+a:hover{
+    color:rgb(255, 0, 0);background-color:rgb(255, 255, 255);text-decoration: none;}
+a:active{
+    color:blue;background-color: rgb(255, 255, 255);text-decoration: none;
+}
+hr{ margin-top: 20px;
+width:80%;
+}
+.or
+{background: #fff;
+width: 30px;
+margin: -19px auto 10px;
+}
+button:hover {
+  background-color:  #525252;
+  color: rgb(255, 255, 255);
+}
+ 
+</style>
+<body>
+    <div class="f1">
+        <h1>Sign In</h1>
+        <form action="process_form.php" method="post">
+            <input type="text" class="input-box" placeholder="User name" name="username"><br>
+            <input type="password" class="input-box" placeholder="Password" name="password">
+            
+            <!-- Gender field -->
+            
+
+            <!-- Phone Number field -->
+            
+            <input type="tel" class="input-box" placeholder="Phone Number" name="phone">
+            
+            <hr>
+            
+            <button type="submit" class="Login-btn">Login</button>
+            <br><br>
+            <img src="/nf1/images/google.png" alt="check your connection" width="40px" height="40px">
+            <img src="/nf1/images/facebook.png" alt="check your connection" width="40px" height="40px">
+            <img src="/nf1/images/twitter.png" alt="" width="40px" height="40px">
+        </form>
+    </div>
+</body>
+</html>

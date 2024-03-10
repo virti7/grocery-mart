@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy ghee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        .side{
+            flex: 30%;
+            padding: 20px;
+        }
+        div.navbar{
+            overflow: hidden;
+            box-sizing: border-box;
+            
+        }
+        .main{
+            flex: 70%;
+            background-color:  rgb(226, 239, 216);
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+           
+        }
+        .row{
+            display: flex;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+                                   
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+    
+        .add{
+    background-color: #f18f18;
+   
+        }
+        button{
+            color: #fff;
+width: 32%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+font-size: 15px;
+
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+
+        }
+        .cartpart{
+            padding-left: 5px;
+            
+        }
+        #h3{
+           padding-left: 0px;
+            text-decoration: none;
+        }
+        button:hover {
+  background-color:  #61c258;
+  color: rgb(255, 255, 255);}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="side">
+          
+          <h3 id="h3">Gowradhan Ghee</h3>
+          <div class="container"></div>
+          <div class="img" ><img src="gowardhanghee.jpg"></div>
+          <div class="text"></div>
+          <div class="cartpart">
+          <p>
+          <h3 id="h3">Gowardhan ghee</h3>
+          <del class="del">MRP:	₹750.84</del>
+          Price:	₹700.5 
+          &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+            <h5>(Inclusive of all taxes)</h5>
+            </p>
+          </div>
+        </div>
+        <div class="main">
+        
+            <p class="p">
+                <h2>Gowardhan Ghee</h2><br><hr>
+                <h4>About the Product:</h4>
+                Gowardhan Ghee is a premium and traditional clarified butter known for its rich, nutty flavor and aromatic goodness. Made from pure cow's milk, this ghee is carefully prepared to offer you the authentic taste of India. It's a versatile kitchen essential, perfect for enhancing the flavor of your favorite dishes.<br><br><hr>
+                <h4>Storage and Uses:</h4>
+                To maintain the quality and freshness of Gowardhan Ghee, store it in a cool, dry place away from direct sunlight. Ghee can be used in a multitude of ways, from cooking, frying, and sautéing to drizzling over your favorite Indian bread, rice, or desserts. It adds a delightful depth of flavor to your culinary creations.<br><br><hr>
+                <h4>Benefits:</h4>
+                Gowardhan Ghee is more than just a cooking fat; it's a source of nutrition. It is known for its high smoke point, making it suitable for various cooking methods. It's also believed to have numerous health benefits, including improved digestion, promoting bone health, and providing essential nutrients.<br><br><hr>
+                <h4>Packaging and Varieties:</h4>
+                Please note that Gowardhan Ghee may come in different packaging sizes and varieties. You can choose the one that suits your preferences and needs. The actual product's packaging may vary slightly, and you will be billed based on the selected option during order processing.
+            </p>
+            <script>
+               
+                document.getElementById("addToCartButton").addEventListener("click", addToCart);
+                function addToCart() {
+                    const productName = "Ghee";
+                    const price = 750.84;
+                
+                    // Create a cart item object
+                    const cartItem = {
+                        productName: productName,
+                        price: price,
+                    };
+                
+                    // Retrieve existing cart items from local storage or initialize an empty array
+                    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+                
+                    // Add the item to the cart
+                    cartItems.push(cartItem);
+                
+                    // Store the updated cart items in local storage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                }
+                
+                        
+                        
+                    </script>
+                <a href="../images/shoppingCart.html">View Shopping Cart</a>
+                
+                </body>
+                </html>

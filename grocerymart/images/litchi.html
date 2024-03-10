@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy fresh litchi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        .side{
+            flex: 30%;
+            padding: 20px;
+        }
+        div.navbar{
+            overflow: hidden;
+            box-sizing: border-box;
+            
+        }
+        .main{
+            flex: 70%;
+            background-color:  rgb(226, 239, 216);
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+           
+        }
+        .row{
+            display: flex;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+                                   
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+    
+        .add{
+    background-color: #f18f18;
+   
+        }
+        button{
+            color: #fff;
+width: 32%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+font-size: 15px;
+
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+
+        }
+        .cartpart{
+            padding-left: 5px;
+            
+        }
+        #h3{
+           padding-left: 0px;
+            text-decoration: none;
+        }
+        button:hover {
+  background-color:  #61c258;
+  color: rgb(255, 255, 255);}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="side">
+          
+          <h3 id="h3">Fresh Lychees</h3>
+          <div class="container"></div>
+          <div class="img" ><img src="lichi.png"></div>
+          <div class="text"></div>
+          <div class="cartpart">
+          <p>
+          <h3 id="h3"> Fresh Lychees 1 dozen</h3>
+          <del class="del">MRP:	₹200.84</del>
+          Price:	₹180.5 
+          &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+            <h5>(Inclusive of all taxes)</h5>
+            </p>
+          </div>
+        </div>
+        <div class="main">
+        
+            <p class="p">
+                <h2>Fresho Lychees</h2><br><hr>
+                <h4>About the Product:</h4>
+                Lychees are a delicious and exotic fruit cherished for their sweet and fragrant taste. They are known for their pink to reddish-brown skin and juicy, translucent flesh. With their unique flavor and juicy texture, lychees are a delightful addition to your fruit selection.<br><br><hr>
+                <h4>Storage and Uses:</h4>
+                We handle lychees with care to ensure they reach you in perfect condition. Store them in the refrigerator to maintain their freshness and flavor. Lychees can be enjoyed as a refreshing snack, added to fruit salads, used in desserts, or even blended into smoothies. They are a good source of vitamins and minerals.<br><br><hr>
+                <h4>Benefits:</h4>
+                Lychees are not only a delectable fruit but also offer various health benefits. They contain essential nutrients and antioxidants, making them a great choice for your well-being. Lychees are known for their potential to improve digestion, boost the immune system, and support skin health.<br><br><hr>
+                <h4>Variable weight policy:</h4>
+                Please note that the item(s) in this product may vary slightly in size and weight. Therefore, the actual weight of the product delivered may have a small variance, and you will be billed based on the actual weight during order processing.
+              </p>
+              <script>
+               
+                document.getElementById("addToCartButton").addEventListener("click", addToCart);
+                function addToCart() {
+                    const productName = "Lychee";
+                    const price = 200.84;
+                
+                    // Create a cart item object
+                    const cartItem = {
+                        productName: productName,
+                        price: price,
+                    };
+                
+                    // Retrieve existing cart items from local storage or initialize an empty array
+                    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+                
+                    // Add the item to the cart
+                    cartItems.push(cartItem);
+                
+                    // Store the updated cart items in local storage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                }
+                
+                        
+                        
+                    </script>
+                <a href="../images/shoppingCart.html">View Shopping Cart</a>
+                
+                </body>
+                </html>

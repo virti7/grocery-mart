@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy coffee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        .side{
+            flex: 30%;
+            padding: 20px;
+        }
+        div.navbar{
+            overflow: hidden;
+            box-sizing: border-box;
+            
+        }
+        .main{
+            flex: 70%;
+            background-color:  rgb(226, 239, 216);
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+           
+        }
+        .row{
+            display: flex;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+                                   
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+    
+        .add{
+    background-color: #f18f18;
+   
+        }
+        button{
+            color: #fff;
+width: 32%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+font-size: 15px;
+
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+
+        }
+        .cartpart{
+            padding-left: 5px;
+            
+        }
+        #h3{
+           padding-left: 0px;
+            text-decoration: none;
+        }
+        button:hover {
+  background-color:  #61c258;
+  color: rgb(255, 255, 255);}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="side">
+          
+          <h3 id="h3">Nescafe</h3>
+          <div class="container"></div>
+          <div class="img" ><img src="coffee.png"></div>
+          <div class="text"></div>
+          <div class="cartpart">
+          <p>
+          <h3 id="h3">Nescafe </h3>
+          <del class="del">MRP:	₹250.84</del>
+          Price:	₹200.5 
+          &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+            <h5>(Inclusive of all taxes)</h5>
+            </p>
+          </div>
+        </div>
+        <div class="main">
+        
+            <p class="p">
+                <h2>Nescafe Coffee</h2><br><hr>
+                <h4>About the Product:</h4>
+                Nescafe Coffee is a popular and beloved coffee brand known for its rich, aromatic coffee beans. With a delightful blend of flavor and aroma, Nescafe Coffee is a perfect choice for coffee lovers. Enjoy a cup of Nescafe Coffee to kickstart your day or savor it as a comforting beverage at any time.<br><br><hr>
+                <h4>Storage and Uses:</h4>
+                Our Nescafe Coffee is carefully crafted to preserve its exceptional taste. Store it in a cool, dry place to maintain its freshness. Nescafe Coffee can be brewed to perfection using various methods, including drip brewing, espresso, or instant coffee. It's an ideal choice for a quick and flavorful coffee experience.<br><br><hr>
+                <h4>Benefits:</h4>
+                Nescafe Coffee not only satisfies your coffee cravings but also offers a quick energy boost. Coffee is known for its caffeine content, which can help enhance alertness and concentration. Additionally, Nescafe Coffee is a source of antioxidants and can provide a moment of relaxation and indulgence.<br><br><hr>
+                <h4>Weight and Packaging:</h4>
+                Please note that the weight and packaging of Nescafe Coffee may vary slightly between different variants and sizes. You will be billed based on the actual weight and packaging of the product you select during order processing.
+            </p>
+            <script>
+               
+                document.getElementById("addToCartButton").addEventListener("click", addToCart);
+                function addToCart() {
+                    const productName = "Coffee";
+                    const price = 200.5;
+                
+                    // Create a cart item object
+                    const cartItem = {
+                        productName: productName,
+                        price: price,
+                    };
+                
+                    // Retrieve existing cart items from local storage or initialize an empty array
+                    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+                
+                    // Add the item to the cart
+                    cartItems.push(cartItem);
+                
+                    // Store the updated cart items in local storage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                }
+                
+                        
+                        
+                    </script>
+                <a href="../images/shoppingCart.html">View Shopping Cart</a>
+                
+                </body>
+                </html>

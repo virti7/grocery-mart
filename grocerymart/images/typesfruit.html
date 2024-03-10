@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>buy fruits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      .products {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .product-slider {
+    display: flex;
+  }
+
+  .product-box {
+    width: 40%; /* Adjust the width as per your preference */
+    justify-content: space-around;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 10px;
+    padding: 3rem 2rem;
+    transition: transform 500ms linear;
+  }
+
+  .product-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 500ms linear;
+  }
+
+  .product-box img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    
+  }
+
+  .product-box h3 {
+    color: black;
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .product-box p {
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+  }
+</style>
+</head>
+<body>
+    <div class="products">
+        <div class="product-slider">
+            <div class="product-box"><a href="strawaberry.html">
+                <img src="/nf1/images/strawberry.png" alt="strawberry"></a>
+                <h3>Fresh Strawberries</h3>
+               
+            </div>
+            <div class="product-box"><a href="orange.html">
+                <img src="/nf1/images/orange.png" alt="Orange"></a>
+                <h3>Fresh Orange</h3>
+               
+            </div>
+            <div class="product-box"><a href="litchi.html">
+                <img src="/nf1/images/lichi.png" alt="litchi"></a>
+                <h3>Fresh litchi</h3>
+              
+            </div>
+            <!-- Add more product boxes here -->
+        </div>
+    </div>
+</body>
+</html>

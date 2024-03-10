@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>buy herbs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      .products {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .product-slider {
+    display: flex;
+  }
+
+  .product-box {
+    width: 40%; /* Adjust the width as per your preference */
+    justify-content: space-around;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 10px;
+    padding: 3rem 2rem;
+    transition: transform 500ms linear;
+  }
+
+  .product-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 500ms linear;
+  }
+
+  .product-box img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    
+  }
+
+  .product-box h3 {
+    color: black;
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .product-box p {
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+  }
+</style>
+</head>
+<body>
+    <div class="products">
+        <div class="product-slider">
+            <div class="product-box"><a href="curryleaves.html">
+                <img src="/nf1/images/curryleaves.png" alt="Curry Leaves"></a>
+                <h3>Curry Leaves</h3>
+               
+            </div>
+            <div class="product-box"><a href="fenugreek.html">
+                <img src="/nf1/images/fenugreek.jpg" alt="Fenugreek"></a>
+                <h3>Fenugreek</h3>
+                
+            </div>
+            <div class="product-box"><a href="spinach.html">
+                <img src="/nf1/images/spinach.jpg" alt="Spinach"></a>
+                <h3>Spinach</h3>
+                
+            </div>
+            <!-- Add more product boxes here -->
+        </div>
+    </div>
+</body>
+</html>

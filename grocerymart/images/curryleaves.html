@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy fresh curry leaves</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        .side{
+            flex: 30%;
+            padding: 20px;
+        }
+        div.navbar{
+            overflow: hidden;
+            box-sizing: border-box;
+            
+        }
+        .main{
+            flex: 70%;
+            background-color:  rgb(226, 239, 216);
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-family: 'Overpass', sans-serif;
+           
+        }
+        .row{
+            display: flex;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+                                   
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 3px 7px 0 rgba(223, 223, 223, 0.2), 0 5px 10px 0 rgba(164, 163, 163, 0.19);
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+    
+        .add{
+    background-color: #f18f18;
+   
+        }
+        button{
+            color: #fff;
+width: 32%;
+box-shadow: 0 0 4px rgba(0,0,0,0.3); margin: 6% auto 0; 
+padding: 10px ;
+font-size: 15px;
+
+outline: none;
+cursor: pointer;
+border: 1px solid #999;
+
+        }
+        .cartpart{
+            padding-left: 5px;
+            
+        }
+        #h3{
+           padding-left: 0px;
+            text-decoration: none;
+        }
+        button:hover {
+  background-color:  #61c258;
+  color: rgb(255, 255, 255);}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="side">
+          
+          <h3 id="h3">Fresh Curry-leaves</h3>
+          <div class="container"></div>
+          <div class="img" ><img src="curryleaves.png"></div>
+          <div class="text"></div>
+          <div class="cartpart">
+          <p>
+          <h3 id="h3"> Fresho Curry Leaves, 100 g</h3>
+          <del class="del">MRP:	₹32.84</del>
+          Price:	₹11.5 (₹0.12/g)
+          &nbsp;    <button type="button" class="add" id="addToCartButton">ADD</button>
+            <h5>(Inclusive of all taxes)</h5>
+            </p>
+          </div>
+        </div>
+        <div class="main">
+        
+          <p class="p">
+            <h2>Fresho Curry Leaves</h2><br><hr>
+<h4>About the Product:</h4>
+Curry leaves are an essential element of Indian cooking style where numerous of the traditional and modern recipes are imperfect without curry leaves.These are used as tasting agent in food for its different taste.With dark green and glossy appearance, curry leaves have a strong flavour and release a tasty aroma when fried in hot oil.<br><br><hr>
+<h4>Storage and Uses:</h4>
+We deliver curry leaves in the best hygienic packages which can be directly stored in the refrigerator.If you wish to store them for a long period, dry and store them in the freezer by placing them in an air tight container.<br><br><hr>
+<h4>Benefits:</h4>
+Curry leaves are anti-diabetic and anti-carcinogenic.They help in the better functioning of the heart. they are a good remedy for diarrhea, nausea and indigestion.Curry leaves help improve eyesight and prevents cataract..<br><br><hr>
+<h4>Variable weight policy:</h4>
+Please note that the item(s) in this product may vary slightly in size and weight. Hence, the actual weight of the product delivered can have a small variance. You will be billed based on the actual weight during order processing.
+</p>
+<script>
+               
+    document.getElementById("addToCartButton").addEventListener("click", addToCart);
+    function addToCart() {
+        const productName = "Capsicum";
+        const price = 33.5;
+    
+        // Create a cart item object
+        const cartItem = {
+            productName: productName,
+            price: price,
+        };
+    
+        // Retrieve existing cart items from local storage or initialize an empty array
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    
+        // Add the item to the cart
+        cartItems.push(cartItem);
+    
+        // Store the updated cart items in local storage
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+    
+            
+            
+        </script>
+    <a href="../images/shoppingCart.html">View Shopping Cart</a>
+    
+    </body>
+    </html>
